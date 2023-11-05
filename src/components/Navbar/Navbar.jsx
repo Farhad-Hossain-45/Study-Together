@@ -1,12 +1,20 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext)
+
+  const handleLogOut = () =>{
+    logOut()
+    .then()
+    .catch()
+  }
   const navLinks = <>
     <li> <NavLink to='/'>Home</NavLink> </li>
     <li> <NavLink to='/createAssignment'>Create Assignment</NavLink> </li>
-    <li> <NavLink to='/login'>Login</NavLink> </li>
+    <li> <NavLink to='/register'>Register</NavLink> </li>
   </>
   return (
     <div>
@@ -44,7 +52,27 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+        {
+      user && <p>{user.displayName}</p>
+      
+    }
+
+    {
+      user && <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+      <div className="w-10 rounded-full">
+        <img src={user.photoURL} />
+      </div>
+    </label>
+    
+    }
+
+    {
+      user ? <button onClick={handleLogOut} className='btn rounded-xl'>Sing Out</button> : 
+
+    <Link to="/login">
+      <button className='btn rounded-xl'>Login</button>
+      </Link>
+    }
         </div>
       </div>
     </div>
