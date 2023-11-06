@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-vars */
-import { stringify } from 'postcss';
 import React from 'react';
-import Swal from 'sweetalert2';
 
-const CreateAssignment = () => {
-    const handleOnSubmit = e => {
+const UpdateAssignment = () => {
+    const handleUpdateAssignment = e => {
         e.preventDefault();
         const form = e.target;
         const title = form.title.value;
@@ -14,28 +12,8 @@ const CreateAssignment = () => {
         const image = form.image.value;
         const date = form.date.value;
 
-        const newAssignment = {title,description,marks,type,image,date};
-        console.log(newAssignment)
-
-        // fetch('http://localhost:5001/assignments',{
-        //     method: "POST",
-        //     headers: {
-        //         'content-type' : 'application/json'
-        //     },
-        //     body: JSON.stringify(newAssignment)
-        // })
-        // .then(res=>res.json())
-        // .then(data => {
-        //     console.log(data)
-        //     if(data.insertedId){
-        //         Swal.fire({
-        //             title: 'Success !',
-        //             text: 'User added successfully',
-        //             icon: 'success',
-        //             confirmButtonText: 'Cool'
-        //           })
-        //     }
-        // })
+        const updateAssignment = {title,description,marks,type,image,date};
+        console.log(updateAssignment)
     }
     return (
         <div >
@@ -43,7 +21,7 @@ const CreateAssignment = () => {
         
         
         <div className="bg-gray-500 w-[350px] md:w-[600px] mb-20 p-10 rounded-md flex  mx-auto justify-center mt-10">
-        <form onSubmit={handleOnSubmit}>
+        <form onSubmit={handleUpdateAssignment}>
             <p className="text-lg font-semibold text-white">Title</p>
             <input className="pl-2 py-2 w-[300px] md:w-[400px]  text-lg "required type="text" name="title" placeholder="Assignment Title" id="" />
             <br />
@@ -74,7 +52,7 @@ const CreateAssignment = () => {
                
                <button    className="btn w-[300px] mt-4 md:w-[400px]
                   hover:text-black
-                 text-lg font-semibold">ADD ASSIGNMENT</button>
+                 text-lg font-semibold">UPDATE ASSIGNMENT</button>
 
         </form>
     </div>
@@ -82,4 +60,4 @@ const CreateAssignment = () => {
     );
 };
 
-export default CreateAssignment;
+export default UpdateAssignment;

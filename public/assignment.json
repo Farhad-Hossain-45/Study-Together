@@ -1,0 +1,17 @@
+[
+    {"_id":"6547b1ed37e46f2945d5412e",
+    "title":"HTML and CSS Assignment",
+    "description":"In this initial assignment, we will be working with HTML and CSS to create a responsive web page that fits all screen sizes.",
+    "marks":"50",
+    "type":"easy",
+    "image":"https://i.ibb.co/4PPzkht/html-css.jpg",
+    "date":"2023-11-06"},
+    {"_id":"6547b39137e46f2945d5412f","title":"Javascript","description":"This assignment will have you practice some fundamental JavaScript concepts and how to use them in the browser.","marks":"52","type":"easy","image":"https://i.ibb.co/pX1jKPN/javascript.png","date":"2023-11-22"},
+    {"_id":"6547b51c37e46f2945d54130","title":"React","description":"Coding assignments for learning React through practice.","marks":"45","type":"easy","image":"https://i.ibb.co/Y7JZPhj/react-image.webp","date":"2023-11-07"},
+    {"_id":"6547b6ae37e46f2945d54131","title":"C Programing","description":"C programming Assignments with solutions","marks":"35","type":"medium","image":"https://i.ibb.co/4YbL91s/c-programing.png","date":"2023-12-06"},
+    {"_id":"6547b7dd37e46f2945d54132","title":"C++ Programing","description":"This assignment must be completed individually. Working in groups is not permitted.","marks":"51","type":"medium","image":"https://i.ibb.co/gMLsGq8/c-image.webp","date":"2024-01-05"},
+    {"_id":"6547b8ec37e46f2945d54133","title":"Java Programing","description":"Knowing how to write, compile and execute code is a skill you'll need throughout your professional career.","marks":"48","type":"medium","image":"https://i.ibb.co/Wv5nPFR/java-image.jpg","date":"2023-11-01"},
+    {"_id":"6547ba9937e46f2945d54134","title":"Node js","description":"NodeJS stores data in native JSON format thus making it fast.","marks":"42","type":"hard","image":"https://i.ibb.co/6Xx7kRZ/node-js-image.png","date":"2023-11-29"},
+    {"_id":"6547bb6337e46f2945d54135","title":"PHP Programing","description":"The best way we learn anything is by practice and more practice.","marks":"30","type":"hard","image":"https://i.ibb.co/mtX5B76/php-image.jpg","date":"2023-11-29"},
+    {"_id":"6547bc1b37e46f2945d54136","title":"Python Programing","description":"This Python essential exercise is to help Python beginners to learn necessary Python skills quickly.","marks":"35","type":"hard","image":"https://i.ibb.co/3N1yS8G/python-image.jpg","date":"2023-12-07"}
+]

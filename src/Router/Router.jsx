@@ -21,6 +21,7 @@ const Router = createBrowserRouter ([
                 element: <CreateAssignment></CreateAssignment>
 
             },
+            
             {
                 path: '/login',
                 element: <Login></Login>
@@ -28,7 +29,8 @@ const Router = createBrowserRouter ([
             {
                 path: '/register',
                 element: <Register></Register>
-            }
+            },
+
         ]
     }
 ])
