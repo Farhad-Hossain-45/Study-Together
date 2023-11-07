@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 
 const AssignmentDetails = () => {
@@ -20,7 +20,9 @@ const AssignmentDetails = () => {
     <p className='text-xl font-semibold'>Assignment Difficulty: {type}</p>
     <p className='text-xl font-semibold'>Due Date: {date}</p>
     <div className="card-actions">
-      <button className="btn outline-primary btn-outline">Take Assignment</button>
+      <Link to={`/takeAssignment/${_id}`}>
+          <button className="btn outline-primary btn-outline">Take Assignment</button>
+      </Link>
     </div>
   </div>
 </div>

@@ -11,12 +11,15 @@ import AssignmentDetails from '../Pages/Assignments/AssignmentDetails/Assignment
 import MyAssignments from '../Pages/MyAssignments/MyAssignments';
 import SubmittedAssignment from '../Pages/SubmittedAssignment/SubmittedAssignment';
 import UpdateAssignment from '../components/UpdateAssignment/UpdateAssignment';
+import TakeAssignment from '../components/TakeAssignment/TakeAssignment';
+import Error from '../Pages/Error/Error';
 
 
 const Router = createBrowserRouter ([
     {
         path: '/',
         element: <Layout></Layout>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: '/',
@@ -49,6 +52,11 @@ const Router = createBrowserRouter ([
                 path : '/updateAssignments/:id',
                 element: <UpdateAssignment></UpdateAssignment>,
                 loader: ({params}) =>fetch(`http://localhost:5001/assignments/${params.id}`)
+            },
+            {
+                path: '/takeAssignment/:id',
+                element: <TakeAssignment></TakeAssignment>,
+                loader: ({params}) =>fetch(`http://localhost:5001/assignments/${params.id}`) 
             },
            
             {
