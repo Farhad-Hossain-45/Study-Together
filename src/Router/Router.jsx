@@ -6,6 +6,12 @@ import Home from '../Pages/Home';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
 import CreateAssignment from '../Pages/CreateAssignment/CreateAssignment';
+import Assignments from '../Pages/Assignments/Assignments';
+import AssignmentDetails from '../Pages/Assignments/AssignmentDetails/AssignmentDetails';
+import MyAssignments from '../Pages/MyAssignments/MyAssignments';
+import SubmittedAssignment from '../Pages/SubmittedAssignment/SubmittedAssignment';
+import UpdateAssignment from '../components/UpdateAssignment/UpdateAssignment';
+
 
 const Router = createBrowserRouter ([
     {
@@ -21,7 +27,30 @@ const Router = createBrowserRouter ([
                 element: <CreateAssignment></CreateAssignment>
 
             },
-            
+            {
+                path: '/assignments',
+                element: <Assignments></Assignments>
+                
+            },
+            {
+                path: '/myAssignment',
+                element: <MyAssignments></MyAssignments>
+            },
+            {
+                path: '/submittedAssignment',
+                element: <SubmittedAssignment></SubmittedAssignment>
+            },
+            {
+                path : '/assignments/:id',
+                element: <AssignmentDetails></AssignmentDetails>,
+                loader: ({params}) =>fetch(`http://localhost:5001/assignments/${params.id}`)
+            },
+            {
+                path : '/updateAssignments/:id',
+                element: <UpdateAssignment></UpdateAssignment>,
+                loader: ({params}) =>fetch(`http://localhost:5001/assignments/${params.id}`)
+            },
+           
             {
                 path: '/login',
                 element: <Login></Login>
