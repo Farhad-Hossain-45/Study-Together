@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import Banner from '../components/Banner/Banner';
+import Feature from './Feature/Feature';
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
         <div>
             
             <Banner></Banner>
+            <Feature></Feature>
             
         </div>
     );
