@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const TableRow = ({assignment,handelDeleteBtn,handleCompleted}) => {
@@ -22,7 +23,7 @@ const TableRow = ({assignment,handelDeleteBtn,handleCompleted}) => {
                     <h2 className='text-xl font-semibold'>{marks}</h2>
                 </div>
                 <div>
-                    <button className='btn btn-outline btn-secondary mr-2'>give mark</button>
+                <Link to={`/giveMarks/${_id}`}><button className='btn btn-outline btn-secondary mr-2'>give mark</button></Link>
                     <button onClick={()=>handelDeleteBtn(_id)} className='btn btn-outline btn-error'>X</button>
                     {
                         status === 'completed' ? <button className='btn btn-outline btn-primary'> Completed</button> :

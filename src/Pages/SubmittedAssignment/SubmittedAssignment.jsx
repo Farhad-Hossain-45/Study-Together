@@ -7,7 +7,10 @@ import Swal from 'sweetalert2';
 
 const SubmittedAssignment = () => {
     const [takeAssignment,setTakeAssignment] = useState([])
+    // const [filterAssignment,setFilterAssignment] = useState([])
     const {user} = useContext(AuthContext)
+    // const currentEmail = user.email
+  
     const url = (`http://localhost:5001/takeAssignment?email=${user.email}`)
     useEffect(()=>{
         fetch(url)
@@ -16,6 +19,17 @@ const SubmittedAssignment = () => {
             setTakeAssignment(data)
         })
     },[url])
+    // useEffect(()=>{
+    //   fetch('http://localhost:5001/takeAssignment')
+    //   .then(res=>res.json())
+    //   .then(data=> {
+    //     setTakeAssignment(data)
+    //   })
+    // },[])
+    // useEffect(()=>{
+    //   const filterData = takeAssignment.filter(item => item.email == currentEmail)
+    //    setFilterAssignment(filterData)
+    // },[currentEmail, takeAssignment])
 
     const handelDeleteBtn= (id)=>{
         // console.log(id)
@@ -73,6 +87,9 @@ const SubmittedAssignment = () => {
     return (
         <div>
             
+            {/* {
+        filterAssignment.map(assignment=> <TableRow key={assignment._id} assignment={assignment} handelDeleteBtn={handelDeleteBtn} handleCompleted={handleCompleted}></TableRow>)
+      } */}
       {
         takeAssignment.map(assignment=> <TableRow key={assignment._id} assignment={assignment} handelDeleteBtn={handelDeleteBtn} handleCompleted={handleCompleted}></TableRow>)
       }
