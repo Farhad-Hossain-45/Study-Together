@@ -50,11 +50,31 @@ const SubmittedAssignment = () => {
         })
       } 
     console.log(takeAssignment)
+    const handleCompleted = id => {
+      fetch(`http://localhost:5001/takeAssignment/${id}`,{
+        method: 'PATCH',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({status: 'completed'})
+      })
+      .then(res=>res.json())
+      .then(data=>{
+        console.log(data)
+        if(data.modifiedCount> 0){
+          const remaining = takeAssignment.filter(assignment => assignment._id !== id)
+          const updated = takeAssignment.find(assignment => assignment._id === id)
+          updated.status = 'completed'
+          const newAssignment = [updated,...remaining]
+          setTakeAssignment(newAssignment) 
+        }
+      })
+    }
     return (
         <div>
             
       {
-        takeAssignment.map(assignment=> <TableRow key={assignment._id} assignment={assignment} handelDeleteBtn={handelDeleteBtn}></TableRow>)
+        takeAssignment.map(assignment=> <TableRow key={assignment._id} assignment={assignment} handelDeleteBtn={handelDeleteBtn} handleCompleted={handleCompleted}></TableRow>)
       }
       
       

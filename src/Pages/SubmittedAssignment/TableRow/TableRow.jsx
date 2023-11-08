@@ -3,8 +3,8 @@
 import React from 'react';
 
 
-const TableRow = ({assignment,handelDeleteBtn}) => {
-    const { _id ,title, marks,name } = assignment || {}
+const TableRow = ({assignment,handelDeleteBtn,handleCompleted}) => {
+    const { _id ,title, marks,name,status } = assignment || {}
     
     return (
         <div className='mt-3'>
@@ -24,7 +24,10 @@ const TableRow = ({assignment,handelDeleteBtn}) => {
                 <div>
                     <button className='btn btn-outline btn-secondary mr-2'>give mark</button>
                     <button onClick={()=>handelDeleteBtn(_id)} className='btn btn-outline btn-error'>X</button>
-
+                    {
+                        status === 'completed' ? <button className='btn btn-outline btn-primary'> Completed</button> :
+                        <button onClick={()=>handleCompleted(_id)} className='btn btn-outline btn-secondary'>Pending</button>
+                    }
                 </div>
             </div>
         </div>
