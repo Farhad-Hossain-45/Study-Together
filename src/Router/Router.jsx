@@ -13,6 +13,7 @@ import SubmittedAssignment from '../Pages/SubmittedAssignment/SubmittedAssignmen
 import UpdateAssignment from '../components/UpdateAssignment/UpdateAssignment';
 import TakeAssignment from '../components/TakeAssignment/TakeAssignment';
 import Error from '../Pages/Error/Error';
+import PrivetRoute from '../components/PrivetRoute/PrivetRoute';
 
 
 const Router = createBrowserRouter ([
@@ -41,7 +42,8 @@ const Router = createBrowserRouter ([
             },
             {
                 path: '/submittedAssignment',
-                element: <SubmittedAssignment></SubmittedAssignment>
+                element: <PrivetRoute><SubmittedAssignment></SubmittedAssignment></PrivetRoute>
+                
             },
             {
                 path : '/assignments/:id',

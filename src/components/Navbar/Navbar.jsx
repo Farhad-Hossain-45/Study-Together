@@ -5,11 +5,12 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import Logo from "../Logo/Logo";
 
 const Navbar = () => {
-  const {user, logOut} = useContext(AuthContext)
+  const {user, logOut, loading} = useContext(AuthContext)
 
   const handleLogOut = () =>{
     logOut()
     .then()
+    
     .catch()
   }
   const navLinks = <>
@@ -17,7 +18,9 @@ const Navbar = () => {
     <li> <NavLink to='/createAssignment'>Create Assignment</NavLink> </li>
     <li> <NavLink to='/assignments'>Assignments</NavLink> </li>
     <li> <NavLink to='/myAssignment'>My Assignments</NavLink> </li>
-    <li> <NavLink to='/submittedAssignment'>Submitted Assignment</NavLink> </li>
+    {
+      user?.email && <li> <NavLink to='/submittedAssignment'>Submitted Assignment</NavLink> </li>
+    }
 
     <li> <NavLink to='/register'>Register</NavLink> </li>
   </>

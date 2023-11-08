@@ -17,7 +17,7 @@ const TakeAssignment = () => {
         const email = user?.email;
         const name = user?.displayName;
 
-        const newValue = {pdfUrl,node,email,name,image}
+        const newValue = {pdfUrl,node,email,name,image,marks,title}
         console.log(newValue)
 
         fetch('http://localhost:5001/takeAssignments',{
