@@ -6,13 +6,14 @@ import { AuthContext } from '../../components/AuthProvider/AuthProvider';
 
 const Assignments = () => {
     const [assignments,setAssignments] = useState([])
-    const [filterDifficulty,setFilterDifficulty] = useState('')
+    // const [filterDifficulty,setFilterDifficulty] = useState('')
     const {loading} = useContext(AuthContext)
    useEffect(()=>{
-    fetch('https://eleventh-assignment-server-dx3f7ntz3.vercel.app/assignments')
+    fetch('https://eleventh-assignment-server-smoky.vercel.app/assignments')
     .then(res => res.json())
     .then(data =>{
         setAssignments(data)
+        console.log(data)
     })
    },[])
    console.log(assignments)

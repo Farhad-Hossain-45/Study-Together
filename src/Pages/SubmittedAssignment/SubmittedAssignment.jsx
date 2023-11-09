@@ -11,7 +11,7 @@ const SubmittedAssignment = () => {
     const {user} = useContext(AuthContext)
     // const currentEmail = user.email
   
-    const url = (`https://eleventh-assignment-server-dx3f7ntz3.vercel.app/takeAssignment?email=${user.email}`)
+    const url = (`https://eleventh-assignment-server-smoky.vercel.app/takeAssignment?email=${user.email}`)
     useEffect(()=>{
         fetch(url)
         .then(res=>res.json())
@@ -20,7 +20,7 @@ const SubmittedAssignment = () => {
         })
     },[url])
     // useEffect(()=>{
-    //   fetch('https://eleventh-assignment-server-dx3f7ntz3.vercel.app/takeAssignment')
+    //   fetch('https://eleventh-assignment-server-smoky.vercel.app/takeAssignment')
     //   .then(res=>res.json())
     //   .then(data=> {
     //     setTakeAssignment(data)
@@ -44,7 +44,7 @@ const SubmittedAssignment = () => {
         }).then((result) => {
           if (result.isConfirmed) {
             
-            fetch(`https://eleventh-assignment-server-dx3f7ntz3.vercel.app/takeAssignment/${id}`,{
+            fetch(`https://eleventh-assignment-server-smoky.vercel.app/takeAssignment/${id}`,{
               method: "DELETE"
             })
             .then(res => res.json())
@@ -65,7 +65,7 @@ const SubmittedAssignment = () => {
       } 
     console.log(takeAssignment)
     const handleCompleted = id => {
-      fetch(`https://eleventh-assignment-server-dx3f7ntz3.vercel.app/takeAssignment/${id}`,{
+      fetch(`https://eleventh-assignment-server-smoky.vercel.app/takeAssignment/${id}`,{
         method: 'PATCH',
         headers: {
           'content-type': 'application/json'

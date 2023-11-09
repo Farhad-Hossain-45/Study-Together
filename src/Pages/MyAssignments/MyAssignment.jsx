@@ -12,7 +12,7 @@ const MyAssignment = ({assignment}) => {
     const { _id ,title, description, marks, type,image,date,pdfUrl,node,} = assignment || {}
     const [assignments,setAssignments] = useState([])
     useEffect(()=>{
-        fetch('https://eleventh-assignment-server-dx3f7ntz3.vercel.app/giveAssignment')
+        fetch('https://eleventh-assignment-server-smoky.vercel.app/giveAssignment')
         .then(res => res.json())
         .then(data => {
             setAssignments(data)

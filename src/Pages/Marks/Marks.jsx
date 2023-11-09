@@ -23,7 +23,7 @@ const Marks = () => {
     const value = {url,node,marks,feedback,email}
     console.log(value)
 
-    fetch('https://eleventh-assignment-server-dx3f7ntz3.vercel.app/giveAssignment',{
+    fetch('https://eleventh-assignment-server-smoky.vercel.app/giveAssignment',{
         method: 'POST',
         headers: {
             'content-type': 'application/json'

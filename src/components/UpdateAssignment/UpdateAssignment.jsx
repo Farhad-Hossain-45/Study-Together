@@ -18,7 +18,7 @@ const UpdateAssignment = () => {
 
         const updateAssignment = {title,description,marks,type,image,date};
         console.log(updateAssignment)
-        fetch(`https://eleventh-assignment-server-dx3f7ntz3.vercel.app/assignments/${_id}`,{
+        fetch(`https://eleventh-assignment-server-smoky.vercel.app/assignments/${_id}`,{
             method: "PUT",
             headers: {
                 'content-type' : 'application/json'

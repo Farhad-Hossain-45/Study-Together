@@ -20,7 +20,7 @@ const TakeAssignment = () => {
         const newValue = {pdfUrl,node,email,name,image,marks,title}
         console.log(newValue)
 
-        fetch('https://eleventh-assignment-server-dx3f7ntz3.vercel.app/takeAssignments',{
+        fetch('https://eleventh-assignment-server-smoky.vercel.app/takeAssignments',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
