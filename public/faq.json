@@ -1,0 +1,23 @@
+[
+    {
+        "id" : 1,
+      "question": "How to Submit an assignment?",
+      "answer": "By providing a pdf file, name and quick note"
+    },
+    {
+        "id" : 2,
+      "question": "How to check your assignment marks?",
+      "answer": "Go to your my assignment route on navbar and you can find your marks there"
+    },
+    {
+        "id" : 3,
+      "question": "How to create an assignment?",
+      "answer": "By go to create assignment page on navbar and you can create your assignment by fill up the form. "
+    },
+    {
+        "id" : 3,
+      "question": "How to update an assignment?",
+      "answer": "Anyone can update an assignment from update assignment page"
+    }
+  ]
+  
