@@ -15,6 +15,7 @@ import TakeAssignment from '../components/TakeAssignment/TakeAssignment';
 import Error from '../Pages/Error/Error';
 import PrivetRoute from '../components/PrivetRoute/PrivetRoute';
 import Marks from '../Pages/Marks/Marks';
+import MyAssignment from '../Pages/MyAssignments/MyAssignment';
 
 
 const Router = createBrowserRouter ([
@@ -63,9 +64,14 @@ const Router = createBrowserRouter ([
             },
             {
                 path: '/giveMarks/:id',
-                element: <Marks></Marks>,
+                element: <PrivetRoute><Marks></Marks></PrivetRoute>,
                 loader: ({params}) =>fetch(`http://localhost:5001/takeAssignment/${params.id}`)
             },
+            // {
+            //     path: '/giveAssignment/:id',
+            //     element: <PrivetRoute><MyAssignment></MyAssignment></PrivetRoute>,
+            //     loader: ({params}) => fetch(`http://localhost:5001/giveAssignment/${params.id}`)
+            // },
            
             {
                 path: '/login',

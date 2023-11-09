@@ -46,7 +46,7 @@ const Marks = () => {
 
     return (
         <div>
-            <h2>this is marks page:{_id}</h2>
+            
             <div className='bg-gray-400'>
                 <form className='text-center mt-10' onSubmit={handleGiveMarks}>
                 <p className="text-lg font-semibold text-white">Pdf URL</p>

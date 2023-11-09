@@ -29,13 +29,16 @@ const MyAssignments = () => {
     
    console.log(filterData)
     console.log(data)
+    
     return (
         <div>
-            <h2>this is my assignments page</h2>
             
+            
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                     {
                     filterData.map(assignment => <MyAssignment key={assignment._id} assignment ={assignment}></MyAssignment>)
                     }
+                    </div>
                 
             
         </div>

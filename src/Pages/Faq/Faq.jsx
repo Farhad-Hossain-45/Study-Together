@@ -23,16 +23,16 @@ const Faq = () => {
                         <p>Ans: By providing a pdf file, name and quick note</p>
                     </div>
                     <div className='text-center shadow-xl bg-gray-400 rounded-xl'>
-                        <p className='text-2xl font-semibold'>How to check your assignment marks?</p>
-                        <p>Go to your my assignment route on navbar and you can find your marks there.</p>
+                        <p className='text-2xl font-semibold'>Q: How to check your assignment marks?</p>
+                        <p>Ans: Go to your my assignment route on navbar and you can find your marks there.</p>
                     </div>
                     <div className='text-center shadow-xl bg-gray-400 rounded-xl'>
-                        <p className='text-2xl font-semibold'>How to create an assignment?</p>
-                        <p>By go to create assignment page on navbar and you can create your assignment by fill up the form.</p>
+                        <p className='text-2xl font-semibold'>Q: How to create an assignment?</p>
+                        <p>Ans: By go to create assignment page on navbar and you can create your assignment by fill up the form.</p>
                     </div>
                     <div className='text-center shadow-xl bg-gray-400 rounded-xl'>
-                        <p className='text-2xl font-semibold'>How to update an assignment?</p>
-                        <p>Anyone can update an assignment from update assignment page.</p>
+                        <p className='text-2xl font-semibold'>Q: How to update an assignment?</p>
+                        <p>Ans: Anyone can update an assignment from update assignment page.</p>
                     </div>
                 </div>
                
