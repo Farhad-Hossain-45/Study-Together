@@ -7,7 +7,7 @@
     {
         "id" : 2,
       "question": "How to check your assignment marks?",
-      "answer": "Go to your my assignment route on navbar and you can find your marks there"
+      "answer": "Go to your my assignment route on navbar and you can find your marks there."
     },
     {
         "id" : 3,
@@ -17,7 +17,7 @@
     {
         "id" : 3,
       "question": "How to update an assignment?",
-      "answer": "Anyone can update an assignment from update assignment page"
+      "answer": "Anyone can update an assignment from update assignment page."
     }
   ]
   
