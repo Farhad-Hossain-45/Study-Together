@@ -12,7 +12,7 @@ const MyAssignments = () => {
     
 
     useEffect(()=>{
-        fetch('http://localhost:5001/takeAssignment')
+        fetch('https://eleventh-assignment-server-dx3f7ntz3.vercel.app/takeAssignment')
         .then(res => res.json())
         .then(data => {
             setData(data)

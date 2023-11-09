@@ -30,7 +30,7 @@ const Router = createBrowserRouter ([
             },
             {
                 path: '/createAssignment',
-                element: <CreateAssignment></CreateAssignment>
+                element: <PrivetRoute><CreateAssignment></CreateAssignment></PrivetRoute>
 
             },
             {
@@ -50,27 +50,27 @@ const Router = createBrowserRouter ([
             {
                 path : '/assignments/:id',
                 element: <AssignmentDetails></AssignmentDetails>,
-                loader: ({params}) =>fetch(`http://localhost:5001/assignments/${params.id}`)
+                loader: ({params}) =>fetch(`https://eleventh-assignment-server-dx3f7ntz3.vercel.app/assignments/${params.id}`)
             },
             {
                 path : '/updateAssignments/:id',
                 element: <UpdateAssignment></UpdateAssignment>,
-                loader: ({params}) =>fetch(`http://localhost:5001/assignments/${params.id}`)
+                loader: ({params}) =>fetch(`https://eleventh-assignment-server-dx3f7ntz3.vercel.app/assignments/${params.id}`)
             },
             {
                 path: '/takeAssignment/:id',
                 element: <TakeAssignment></TakeAssignment>,
-                loader: ({params}) =>fetch(`http://localhost:5001/assignments/${params.id}`) 
+                loader: ({params}) =>fetch(`https://eleventh-assignment-server-dx3f7ntz3.vercel.app/assignments/${params.id}`) 
             },
             {
                 path: '/giveMarks/:id',
                 element: <PrivetRoute><Marks></Marks></PrivetRoute>,
-                loader: ({params}) =>fetch(`http://localhost:5001/takeAssignment/${params.id}`)
+                loader: ({params}) =>fetch(`https://eleventh-assignment-server-dx3f7ntz3.vercel.app/takeAssignment/${params.id}`)
             },
             // {
             //     path: '/giveAssignment/:id',
             //     element: <PrivetRoute><MyAssignment></MyAssignment></PrivetRoute>,
-            //     loader: ({params}) => fetch(`http://localhost:5001/giveAssignment/${params.id}`)
+            //     loader: ({params}) => fetch(`https://eleventh-assignment-server-dx3f7ntz3.vercel.app/giveAssignment/${params.id}`)
             // },
            
             {

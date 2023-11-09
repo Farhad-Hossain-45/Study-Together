@@ -17,7 +17,7 @@ const CreateAssignment = () => {
         const newAssignment = {title,description,marks,type,image,date};
         console.log(newAssignment)
 
-        fetch('http://localhost:5001/assignments',{
+        fetch('https://eleventh-assignment-server-dx3f7ntz3.vercel.app/assignments',{
             method: "POST",
             headers: {
                 'content-type' : 'application/json'

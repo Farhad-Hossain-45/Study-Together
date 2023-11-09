@@ -9,7 +9,7 @@ const Assignments = () => {
     const [filterDifficulty,setFilterDifficulty] = useState('')
     const {loading} = useContext(AuthContext)
    useEffect(()=>{
-    fetch('http://localhost:5001/assignments')
+    fetch('https://eleventh-assignment-server-dx3f7ntz3.vercel.app/assignments')
     .then(res => res.json())
     .then(data =>{
         setAssignments(data)
