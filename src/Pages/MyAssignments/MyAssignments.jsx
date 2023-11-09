@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../components/AuthProvider/AuthProvider';
+import MyAssignment from './MyAssignment';
 
 const MyAssignments = () => {
     const {user} = useContext(AuthContext)
@@ -33,7 +34,7 @@ const MyAssignments = () => {
             <h2>this is my assignments page</h2>
             
                     {
-                    filterData.map(assignment => <p key={assignment._id}>{assignment.title}</p>)
+                    filterData.map(assignment => <MyAssignment key={assignment._id} assignment ={assignment}></MyAssignment>)
                     }
                 
             
